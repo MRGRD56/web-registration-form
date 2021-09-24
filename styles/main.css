@@ -171,7 +171,7 @@ input.form-checkbox[type="checkbox"] {
 
 .registration-wrapper .registration-form-wrapper .registration-form-inputs-wrapper {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .registration-wrapper .registration-form-wrapper .registration-form-inputs-wrapper > img {
