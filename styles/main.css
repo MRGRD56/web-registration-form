@@ -23,6 +23,10 @@ body {
     margin-top: 18px;
 }
 
+.mb-2 {
+    margin-bottom: 10px;
+}
+
 .mb-3 {
     margin-bottom: 18px;
 }
@@ -101,6 +105,12 @@ input.form-checkbox[type="checkbox"] + label::before {
     height: 16px;
     margin-right: 15px;
     border: 1px solid #E5E5E5;
+}
+
+input.form-checkbox[type="checkbox"]:focus-visible + label::before {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.5);
+    border-radius: 1px;
 }
 
 input.form-checkbox[type="checkbox"]:checked + label::before {

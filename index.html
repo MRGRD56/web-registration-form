@@ -16,20 +16,18 @@
     <body>
         <div class="registration-wrapper">
             <h1>Зарегистрироваться</h1>
-            <div class="registration">
-                <div class="registration-forms-choose invisible">
-                    <div>
-                        <img src="./assets/img/registration-form-1.svg" alt="Форма 1">
-                        <button class="btn-primary">Форма 1</button>
-                    </div>
-                    <div>
-                        <img src="./assets/img/registration-form-2.svg" alt="Форма 1">
-                        <button class="btn-primary">Форма 2</button>
-                    </div>
+            <div class="registration-forms-choose">
+                <div>
+                    <img src="./assets/img/registration-form-1.svg" alt="Форма 1">
+                    <button class="btn-primary">Форма 1</button>
+                </div>
+                <div>
+                    <img src="./assets/img/registration-form-2.svg" alt="Форма 1">
+                    <button class="btn-primary">Форма 2</button>
                 </div>
             </div>
-            <div class="registration-form-wrapper">
-                <button class="btn-close"></button>
+            <div class="registration-form-wrapper invisible">
+                <button class="btn-close form-close-button"></button>
                 <form class="registration-form">
                     <div class="registration-form-inputs-wrapper">
                         <div class="registration-form-inputs">
@@ -38,8 +36,32 @@
                         </div>
                         <img src="./assets/img/registration-form-1.svg" alt="Регистрация">
                     </div>
-                    <input type="checkbox" class="form-checkbox" id="emailing-checkbox">
-                    <label for="emailing-checkbox">Я хочу получать рассылку после мероприятия</label>
+                    <input type="checkbox" class="form-checkbox" id="form-1-emailing-checkbox">
+                    <label for="form-1-emailing-checkbox">Я хочу получать рассылку после мероприятия</label>
+                    <button type="submit" class="btn-primary registration-button">Зарегистрироваться</button>
+                    <div class="description mt-3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo.
+                    </div>
+                </form>
+            </div>
+            <div class="registration-form-wrapper invisible">
+                <button class="btn-close form-close-button"></button>
+                <form class="registration-form">
+                    <div class="registration-form-inputs-wrapper mb-2">
+                        <div class="registration-form-inputs">
+                            <input type="text" class="form-input" placeholder="Имя">
+                            <input type="text" class="form-input" placeholder="Фамилия">
+                            <input type="text" class="form-input" placeholder="Телефон">
+                            <input type="text" class="form-input" placeholder="Email">
+                            <input type="text" class="form-input" placeholder="Название компании">
+                            <input type="text" class="form-input" placeholder="Регион">
+                        </div>
+                        <img src="./assets/img/registration-form-2.svg" alt="Регистрация">
+                    </div>
+                    <input type="checkbox" class="form-checkbox" id="form-2-emailing-checkbox">
+                    <label for="form-2-emailing-checkbox">Я хочу получать рассылку после мероприятия</label>
                     <button type="submit" class="btn-primary registration-button">Зарегистрироваться</button>
                     <div class="description mt-3">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
