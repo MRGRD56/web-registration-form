@@ -17,11 +17,36 @@
         <div class="registration-wrapper">
             <h1>Зарегистрироваться</h1>
             <div class="registration">
-                <div class="registration-forms-choose">
+                <div class="registration-forms-choose invisible">
                     <div>
-
+                        <img src="./assets/img/registration-form-1.svg" alt="Форма 1">
+                        <button class="btn-primary">Форма 1</button>
+                    </div>
+                    <div>
+                        <img src="./assets/img/registration-form-2.svg" alt="Форма 1">
+                        <button class="btn-primary">Форма 2</button>
                     </div>
                 </div>
+            </div>
+            <div class="registration-form-wrapper">
+                <button class="btn-close"></button>
+                <form class="registration-form">
+                    <div class="registration-form-inputs-wrapper">
+                        <div class="registration-form-inputs">
+                            <input type="text" class="form-input" placeholder="Email или телефон">
+                            <input type="text" class="form-input" placeholder="Город">
+                        </div>
+                        <img src="./assets/img/registration-form-1.svg" alt="Регистрация">
+                    </div>
+                    <input type="checkbox" class="form-checkbox" id="emailing-checkbox">
+                    <label for="emailing-checkbox">Я хочу получать рассылку после мероприятия</label>
+                    <button type="submit" class="btn-primary registration-button">Зарегистрироваться</button>
+                    <div class="description mt-3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo.
+                    </div>
+                </form>
             </div>
         </div>
         <script src="./scripts/index.js"></script>
