@@ -27,7 +27,10 @@ function setFieldValidationMessage(field, message) {
 
 function validateField(field) {
     const validity = field.validity;
-    const validationMessage = field.getAttribute("data-validation-msg");
+    let validationMessage = field.getAttribute("data-validation-msg");
+    if (!validationMessage) {
+        validationMessage = "Поле заполнено некорректно";
+    }
 
     const isValid = validity.valid;
     const isEmpty = validity.valueMissing;
