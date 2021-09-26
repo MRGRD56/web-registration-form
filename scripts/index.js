@@ -30,7 +30,7 @@ for (let i = 0; i < formCloseButtons.length; i++) {
     const button = formCloseButtons[i];
     const buttonFormId = button.getAttribute("data-form");
     button.addEventListener("click", function () {
-        const formWrapper = Array.from(registrationFormsContainers)
+        const formWrapper = arrayFrom(registrationFormsContainers)
             .filter(function (fw) {
                 return fw.getAttribute("data-form") === buttonFormId;
             })[0];
@@ -43,7 +43,7 @@ for (let i = 0; i < registrationForms.length; i++) {
     const form = registrationForms[i];
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-        const formInputs = Array.from(event.target.querySelectorAll("input"));
+        const formInputs = arrayFrom(event.target.querySelectorAll("input"));
         const formData = formInputs.reduce(function (data, input) {
             const key = input.name;
             const value = input.type === "checkbox" ? input.checked : input.value;
