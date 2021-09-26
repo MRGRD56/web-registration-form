@@ -33,7 +33,8 @@
                     <div class="registration-form-inputs-wrapper">
                         <div class="registration-form-inputs">
                             <input type="text" class="form-input" placeholder="Email или телефон" name="emailOrPhone" required>
-                            <input type="text" class="form-input" placeholder="Город" name="city" required>
+                            <input type="text" class="form-input" placeholder="Город" name="city" required
+                                   pattern="^[а-яёА-ЯЁ\s]+$">
                         </div>
                         <img src="./assets/img/registration-form-1.svg" alt="Регистрация">
                     </div>
@@ -52,13 +53,16 @@
                 <form class="registration-form" data-form="2">
                     <div class="registration-form-inputs-wrapper mb-2">
                         <div class="registration-form-inputs">
-                            <input type="text" class="form-input" placeholder="Имя" name="firstName" required>
-                            <input type="text" class="form-input" placeholder="Фамилия" name="lastName" required>
+                            <input type="text" class="form-input" placeholder="Имя" name="firstName" required
+                                   pattern="^[а-яёА-ЯЁ\s]+$">
+                            <input type="text" class="form-input" placeholder="Фамилия" name="lastName" required
+                                   pattern="^[а-яёА-ЯЁ\s]+$">
                             <input type="text" class="form-input" placeholder="Телефон" name="phone" required
-                            pattern="^[\+0-9\(\)\-]+$">
+                                   pattern="^[\+0-9\(\)\-]+$">
                             <input type="email" class="form-input" placeholder="Email" name="email" required>
                             <input type="text" class="form-input" placeholder="Название компании" name="company" required>
-                            <input type="text" class="form-input" placeholder="Регион" name="region" required>
+                            <input type="text" class="form-input" placeholder="Регион" name="region" required
+                                   pattern="^[а-яёА-ЯЁ\s]+$">
                         </div>
                         <img src="./assets/img/registration-form-2.svg" alt="Регистрация">
                     </div>
