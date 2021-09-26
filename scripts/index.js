@@ -1,7 +1,7 @@
 const formCloseButtons = document.querySelectorAll("button.form-close-button");
 const registrationFormsChooseButtons = document.querySelectorAll(
-    ".registration-wrapper > .registration-forms-choose > div > button");
-const registrationFormsWrappers = document.querySelectorAll(".registration-form-wrapper");
+    ".registration-container > .registration-forms-choose > div > button");
+const registrationFormsContainers = document.querySelectorAll(".registration-form-container");
 const registrationFormsChoose = document.querySelector(".registration-forms-choose");
 const registrationForms = document.querySelectorAll("form.registration-form");
 
@@ -18,8 +18,8 @@ for (let buttonIndex = 0; buttonIndex < registrationFormsChooseButtons.length; b
     const buttonFormId = button.getAttribute("data-form");
     button.addEventListener("click", function () {
         setVisible(registrationFormsChoose, false);
-        for (let formWrapperIndex = 0; formWrapperIndex < registrationFormsWrappers.length; formWrapperIndex++) {
-            const formWrapper = registrationFormsWrappers[formWrapperIndex];
+        for (let formWrapperIndex = 0; formWrapperIndex < registrationFormsContainers.length; formWrapperIndex++) {
+            const formWrapper = registrationFormsContainers[formWrapperIndex];
             const formId = formWrapper.getAttribute("data-form");
             setVisible(formWrapper, formId === buttonFormId);
         }
@@ -30,7 +30,7 @@ for (let i = 0; i < formCloseButtons.length; i++) {
     const button = formCloseButtons[i];
     const buttonFormId = button.getAttribute("data-form");
     button.addEventListener("click", function () {
-        const formWrapper = Array.from(registrationFormsWrappers)
+        const formWrapper = Array.from(registrationFormsContainers)
             .filter(function (fw) {
                 return fw.getAttribute("data-form") === buttonFormId;
             })[0];
