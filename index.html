@@ -29,12 +29,14 @@
             </div>
             <div class="registration-form-container invisible" data-form="1">
                 <button class="btn-close form-close-button" data-form="1"></button>
-                <form class="registration-form" data-form="1">
+                <form class="registration-form" data-form="1" novalidate>
                     <div class="registration-form-inputs-wrapper mb-2">
                         <div class="registration-form-inputs">
-                            <input type="text" class="form-input" placeholder="Email или телефон" name="emailOrPhone" required>
+                            <input type="text" class="form-input" placeholder="Email или телефон" name="emailOrPhone" required
+                                   data-validation-msg="Некорректный Email или телефон">
                             <input type="text" class="form-input" placeholder="Город" name="city" required
-                                   pattern="^[а-яёА-ЯЁ\s]+$">
+                                   pattern="^[а-яёА-ЯЁ\s]+$"
+                                   data-validation-msg="Некорректное название города">
                         </div>
                         <img src="./assets/img/registration-form-1.svg" alt="Регистрация">
                     </div>
@@ -50,19 +52,25 @@
             </div>
             <div class="registration-form-container invisible" data-form="2">
                 <button class="btn-close form-close-button" data-form="2"></button>
-                <form class="registration-form" data-form="2">
+                <form class="registration-form" data-form="2" novalidate>
                     <div class="registration-form-inputs-wrapper mb-2">
                         <div class="registration-form-inputs">
                             <input type="text" class="form-input" placeholder="Имя" name="firstName" required
-                                   pattern="^[а-яёА-ЯЁ\s]+$">
+                                   pattern="^[а-яёА-ЯЁ\s]+$"
+                                   data-validation-msg="Некорректное имя">
                             <input type="text" class="form-input" placeholder="Фамилия" name="lastName" required
-                                   pattern="^[а-яёА-ЯЁ\s]+$">
+                                   pattern="^[а-яёА-ЯЁ\s]+$"
+                                   data-validation-msg="Некоррентная фамилия">
                             <input type="text" class="form-input" placeholder="Телефон" name="phone" required
-                                   pattern="^[\+0-9\(\)\-]+$">
-                            <input type="email" class="form-input" placeholder="Email" name="email" required>
-                            <input type="text" class="form-input" placeholder="Название компании" name="company" required>
+                                   pattern="^[\+0-9\(\)\-]+$"
+                                   data-validation-msg="Некорректный номер телефона">
+                            <input type="email" class="form-input" placeholder="Email" name="email" required
+                                   data-validation-msg="Некорректный Email">
+                            <input type="text" class="form-input" placeholder="Название компании" name="company" required
+                                   data-validation-msg="Некорректное название компании">
                             <input type="text" class="form-input" placeholder="Регион" name="region" required
-                                   pattern="^[а-яёА-ЯЁ\s]+$">
+                                   pattern="^[а-яёА-ЯЁ\s]+$"
+                                   data-validation-msg="Некорректное название региона">
                         </div>
                         <img src="./assets/img/registration-form-2.svg" alt="Регистрация">
                     </div>

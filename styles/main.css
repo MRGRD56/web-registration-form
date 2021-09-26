@@ -10,6 +10,9 @@ html {
 
 body {
     min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 _:-ms-fullscreen, :root body {
@@ -18,12 +21,6 @@ _:-ms-fullscreen, :root body {
 
 .invisible {
     display: none !important;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .registration-container > h1 {
@@ -81,7 +78,7 @@ body {
     max-width: 280px;
 }
 
-.registration-container .registration-form-container .registration-form-inputs-wrapper .registration-form-inputs > input {
+.registration-form-inputs > input {
     display: block;
     margin-bottom: 18px;
     width: 368px;
@@ -90,4 +87,21 @@ body {
 .registration-button {
     margin-top: 30px;
     display: block;
+}
+
+.validation-message {
+    color: #e53935;
+    font-size: 12px;
+    content: "An error occured";
+    display: block;
+}
+
+.registration-form-inputs > input + .validation-message {
+    margin-top: -15px;
+    margin-left: 2px;
+    margin-bottom: 18px;
+}
+
+.registration-form-inputs > input:invalid::after {
+
 }
