@@ -11,7 +11,10 @@ module.exports = {
         port: 3030
     },
     entry: {
-        main: path.resolve(__dirname, "./src/index.js")
+        main: path.resolve(__dirname, "./src/index.ts")
+    },
+    resolve: {
+        extensions: [".js", ".ts"]
     },
     output: {
         path: path.resolve(__dirname, "./dist"),

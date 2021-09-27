@@ -1,4 +1,4 @@
-export function removeHtmlElement(element) {
+export function removeHtmlElement(element: Element) {
     if (element.remove) {
         element.remove();
     } else {
@@ -6,11 +6,11 @@ export function removeHtmlElement(element) {
     }
 }
 
-export function insertAfterElement(element, newElement) {
+export function insertAfterElement(element: Element, newElement: Element) {
     element.parentNode.insertBefore(newElement, element.nextSibling);
 }
 
-export function arrayFrom(value) {
+export function arrayFrom(value: Array<any> | NodeList) {
     if (Array.from) {
         return Array.from(value);
     }

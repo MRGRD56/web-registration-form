@@ -1,11 +1,11 @@
 import {removeHtmlElement, insertAfterElement} from "./common";
 
-export function setFieldValidationMessage(field, message) {
+export function setFieldValidationMessage(field: HTMLInputElement, message: string) {
     const isValid = !message;
 
-    const nextSibling = field.nextSibling;
+    const nextSibling = field.nextSibling as Element;
     const validationDiv = nextSibling && nextSibling.classList
-        ? (nextSibling.classList.contains("validation-message") ? nextSibling : null)
+        ? (nextSibling.classList.contains("validation-message") ? <HTMLElement>nextSibling : null)
         : null;
 
     const hasInvalidClassName = field.classList.contains("invalid");
@@ -29,7 +29,7 @@ export function setFieldValidationMessage(field, message) {
     }
 }
 
-export function validateField(field) {
+export function validateField(field: HTMLInputElement) {
     const validity = field.validity;
     let validationMessage = field.getAttribute("data-validation-msg");
     if (!validationMessage) {
@@ -49,7 +49,7 @@ export function validateField(field) {
     return isValid;
 }
 
-export function validateForm(form) {
+export function validateForm(form: HTMLFormElement) {
     let isValid = true;
 
     const inputs = form.querySelectorAll("input");

@@ -45,7 +45,7 @@ for (let i = 0; i < formCloseButtons.length; i++) {
 }
 
 for (let i = 0; i < registrationForms.length; i++) {
-    const form = registrationForms[i];
+    const form = registrationForms[i] as HTMLFormElement;
     const formInputs = arrayFrom(form.querySelectorAll("input"));
 
     for (let j = 0; j < formInputs.length; j++) {

@@ -1,7 +1,9 @@
 {
     "name": "web-registration-form",
     "version": "1.0.0",
-    "dependencies": {},
+    "dependencies": {
+        "typescript": "^4.4.3"
+    },
     "scripts": {
         "build": "webpack",
         "start": "webpack serve"
