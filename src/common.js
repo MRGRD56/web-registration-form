@@ -1,4 +1,4 @@
-function removeHtmlElement(element) {
+export function removeHtmlElement(element) {
     if (element.remove) {
         element.remove();
     } else {
@@ -6,11 +6,11 @@ function removeHtmlElement(element) {
     }
 }
 
-function insertAfterElement(element, newElement) {
+export function insertAfterElement(element, newElement) {
     element.parentNode.insertBefore(newElement, element.nextSibling);
 }
 
-function arrayFrom(value) {
+export function arrayFrom(value) {
     if (Array.from) {
         return Array.from(value);
     }
